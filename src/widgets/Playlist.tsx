@@ -6,10 +6,11 @@ import Div from '../components/html/Div';
 import './Playlist.css';
 
 type PlaylistProps = {
-  title?: string;
-  desc?: string;
-  src?: string;
-  onClick?: () => void;
+    opened: boolean;
+    title?: string;
+    desc?: string;
+    src?: string;
+    onClick?: () => void;
 
 };
 
@@ -22,13 +23,13 @@ type PlaylistProps = {
  * @param desc The description of the playlist
  * @returns An HTMl dom element that represents a playlist
  */
-export function Playlist({src, title, desc, onClick} : PlaylistProps) {
+export function Playlist({src, title, desc, onClick, opened} : PlaylistProps) {
     return (
         <Div id='playlist' onClick={onClick}>
             <img src={src} alt="Image loading error" id='playlist-cover'></img>
             <div id='playlist-title-desc'>
-                <h3> {title} </h3>
-                <p> {desc} </p>
+                {opened && <h3> {title} </h3>}
+                {opened && <p> {desc} </p>}
             </div>
         </Div>
 

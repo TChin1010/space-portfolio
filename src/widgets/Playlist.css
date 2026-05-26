@@ -1,9 +1,10 @@
 #playlist-cover {
   max-width: auto;
-  max-height: 90%;
-  min-height: 90%;
+  max-height: 80%;
+  min-height: 80%;
   aspect-ratio: 1 / 1;
   margin: var(--default-margins);
   align-self: center;
+  justify-self: center;
   border-radius: var(--default-boarder-radius);
 }

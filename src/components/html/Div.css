@@ -65,7 +65,7 @@
     margin-right: var(--default-margins);
     background-color: var(--background-primary-complementary);
     border-radius: var(--default-boarder-radius);
-    width: 400px;
+    
     scrollbar-gutter: stable;
     
     overflow-y: hidden; 
