@@ -7,6 +7,7 @@ import AboutMeContentContainer from '../widgets/AboutMeContentContainer';
 import Div from '../components/html/Div';
 import ClickToStart from '../widgets/ClickToStart';
 import './Home.css';
+import ExpandedInfo from '../widgets/ExpandedInfo';
 
 export type View = 'projects' | 'about' | 'contact' | 'music' | 'food';
 
@@ -22,6 +23,7 @@ export default function Home() {
                     <PlaylistBar onSelect={setActiveContent} />
                     {activeContent === 'projects' && <MyProjectContentContainer />}
                     {activeContent === 'about' && <AboutMeContentContainer />}
+                    <ExpandedInfo src={'/assets/black.png'}></ExpandedInfo>
                 </Div>
                 <Footer />
             </Div>

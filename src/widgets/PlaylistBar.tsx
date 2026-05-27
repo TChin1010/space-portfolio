@@ -17,10 +17,22 @@ export function PlaylistBar({ onSelect }: PlaylistBarProps) {
     const { t } = useTranslation("Playlist"); 
     const [ opened, setOpened ] = useState(true);
     return (
-        <Div id='playlist-bar' style={{width:opened ? 'auto' : '120px'}}>
-            <div style={{display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
+        <Div id='playlist-bar' style={{
+            width:opened ? '425px' : '120px',
+            transition: 'width 0.3s ease',
+            paddingLeft: 'var(--default-margins)'
+            }}>
+            <div style={{
+                        position: 'sticky',
+                        top: '0px',
+                        display:'flex', 
+                        flexDirection:'row', 
+                        justifyContent:'space-between',
+                        backgroundColor: 'var(--background-primary-complementary)',
+    zIndex: 10}}>
                 {opened && <h2 id='playlist-bar-h2'>My Playlists</h2>}
                 <Button onClick={() => {setOpened(!opened)}}>x</Button>
+                
             </div>
             
             <hr/>

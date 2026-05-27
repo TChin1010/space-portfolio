@@ -9,7 +9,7 @@
     overflow-x: hidden;
 
     padding-left: var(--default-margins);
-
+    margin: 0 var(--default-margins) 0 var(--default-margins);
     padding-right: var(--default-margins); 
 }
 
@@ -62,7 +62,6 @@
 }
 
 #playlist-bar {
-    margin-right: var(--default-margins);
     background-color: var(--background-primary-complementary);
     border-radius: var(--default-boarder-radius);
     
@@ -71,9 +70,6 @@
     overflow-y: hidden; 
     overflow-x: hidden;
     
-    padding-left: var(--default-margins);
-
-    padding-right: var(--default-margins); 
     min-height: 0;
 }
 
@@ -132,4 +128,10 @@
 #music-project:hover {
     transform:scale(1.05);
     background-color: color-mix(in srgb, var(--background-color) 10%, white 10%);
+}
+
+#expanded-info {
+    margin-left: var(--default-margins);
+    background-color: var(--background-primary-complementary);
+    border-radius: var(--default-boarder-radius);
 }
