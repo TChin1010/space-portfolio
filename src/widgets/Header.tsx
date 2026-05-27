@@ -35,7 +35,7 @@ export function Header() {
     };
 
     return (
-        <header className={'header'}>
+        <header className='header'>
             <h2>{t('name')}</h2>
             <h3>{t('status')}</h3>
             <Select

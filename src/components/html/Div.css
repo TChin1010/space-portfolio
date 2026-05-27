@@ -13,6 +13,15 @@
     padding-right: var(--default-margins); 
 }
 
+.side-bar-title {
+    position: sticky;
+    top: 0px;
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+    background-color: var(--background-primary-complementary);
+}
+
 /* 1. Bring back overflow capability ONLY when the container is explicitly hovered */
 .main-content:hover {
     overflow-y: auto;
@@ -61,7 +70,7 @@
     min-height: 0;
 }
 
-#playlist-bar {
+.side-bar {
     background-color: var(--background-primary-complementary);
     border-radius: var(--default-boarder-radius);
     
@@ -74,17 +83,17 @@
 }
 
 /* 1. Bring back overflow capability ONLY when the container is explicitly hovered */
-#playlist-bar:hover {
+.side-bar {
     overflow-y: auto;
 }
 
 /* 2. Keep your default thumb styling hidden, relying on the overflow swap above */
-#playlist-bar::-webkit-scrollbar-thumb {
+.side-bar::-webkit-scrollbar-thumb {
     background: transparent;
     border-radius: var(--default-boarder-radius);
 }
 
-#playlist-bar:hover::-webkit-scrollbar-thumb {
+.side-bar:hover::-webkit-scrollbar-thumb {
     border-radius: var(--default-boarder-radius);
     background: var(--scrollbar-color);
 }

@@ -17,23 +17,16 @@ export function PlaylistBar({ onSelect }: PlaylistBarProps) {
     const { t } = useTranslation("Playlist"); 
     const [ opened, setOpened ] = useState(true);
     return (
-        <Div id='playlist-bar' style={{
+        <Div className='side-bar' style={{
             width:opened ? '425px' : '120px',
             transition: 'width 0.3s ease',
             paddingLeft: 'var(--default-margins)'
             }}>
-            <div style={{
-                        position: 'sticky',
-                        top: '0px',
-                        display:'flex', 
-                        flexDirection:'row', 
-                        justifyContent:'space-between',
-                        backgroundColor: 'var(--background-primary-complementary)',
-    zIndex: 10}}>
+            <Div className='side-bar-title'>
                 {opened && <h2 id='playlist-bar-h2'>My Playlists</h2>}
                 <Button onClick={() => {setOpened(!opened)}}>x</Button>
                 
-            </div>
+            </Div>
             
             <hr/>
             <Playlist opened={opened} onClick={() => onSelect('projects')} src={'/assets/black.png'} title={t('projectsTitle')} desc={t('projectsDesc')}/>

@@ -1,3 +1,8 @@
+#music-info-container {
+    display: flex;
+    flex-direction: row;
+}
+
 #songTitle {
     display: flex;
     flex-direction: column;

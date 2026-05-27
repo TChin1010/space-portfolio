@@ -33,7 +33,7 @@ export function MusicInfo() {
 
     }, [currentSong]);
     return (
-        <Div style={{display: 'flex', flexDirection: 'row', height: '100%'}}>
+        <Div id='music-info-container' style={{ height: '100px'}}>
             <Div id={'songTitle'}>
                 <h3> {title} </h3>
                 <p> {author} </p>

@@ -1,0 +1,25 @@
+#expanded-info {
+    transition: width 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding-right: var(--default-margins);
+    padding-left: var(--default-margins);
+    scrollbar-gutter: auto;
+}
+
+#expanded-info img {
+    align-self: center;
+    width: 100%;
+    display: block; 
+    border-radius: var(--default-boarder-radius);
+}
+
+#expanded-info h2 {
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+#expanded-info p {
+    margin: 0;
+}
