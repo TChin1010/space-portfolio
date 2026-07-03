@@ -8,9 +8,7 @@
     overflow-y: hidden; 
     overflow-x: hidden;
 
-    padding-left: var(--default-margins);
-    margin: 0 var(--default-margins) 0 var(--default-margins);
-    padding-right: var(--default-margins); 
+    margin-left: var(--default-margins);
 }
 
 .side-bar-title {

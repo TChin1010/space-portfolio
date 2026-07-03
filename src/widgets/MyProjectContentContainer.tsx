@@ -4,10 +4,12 @@
 import React from 'react';
 import Div from '../components/html/Div';
 import Music from './Music';
+import ExpandedInfo from './ExpandedInfo';
 import PlaylistHeader from './PlaylistHeader';
 
 export function MyProjectContentContainer() {
     return (
+        <>
         <Div className='main-content'>
             <PlaylistHeader title={'My Projects'} playlistCover={'/assets/black.png'}>4 projects saved</PlaylistHeader>
             <Div id='music-project-container'>
@@ -18,7 +20,8 @@ export function MyProjectContentContainer() {
                 <Music src={'/assets/black.png'}>Assembly Tetris</Music>
             </Div>
         </Div>
-
+        <ExpandedInfo opened={true} src={'/assets/black.png'}></ExpandedInfo>
+        </>
     );
 }
 

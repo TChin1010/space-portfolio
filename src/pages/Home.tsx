@@ -12,7 +12,8 @@ import ExpandedInfo from '../widgets/ExpandedInfo';
 export type View = 'projects' | 'about' | 'contact' | 'music' | 'food';
 
 export default function Home() {
-    const [activeContent, setActiveContent] = useState<View>('projects')
+    const [activeContent, setActiveContent] = useState<View>('projects');
+    const [expandedActive, setExpandedActive] = useState(false);
 
     return (
         <>
@@ -23,7 +24,6 @@ export default function Home() {
                     <PlaylistBar onSelect={setActiveContent} />
                     {activeContent === 'projects' && <MyProjectContentContainer />}
                     {activeContent === 'about' && <AboutMeContentContainer />}
-                    <ExpandedInfo src={'/assets/black.png'}></ExpandedInfo>
                 </Div>
                 <Footer />
             </Div>

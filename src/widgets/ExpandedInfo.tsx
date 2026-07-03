@@ -8,7 +8,7 @@
     import './ExpandedInfo.css';
 
     type ExpandedInfoType = {
-        opened: boolean,
+        opened?: boolean,
         src?: string,
         title?: string,
         details?: string
@@ -18,17 +18,15 @@
         const [isOpened, setOpened] = useState(opened);
         return (
             <>
-                <Div className='side-bar' id='expanded-info' style={{width: isOpened ? '250px' : '20px',}}>
+                {isOpened && <Div className='side-bar' id='expanded-info' style={{width: isOpened ? '250px' : '20px',}}>
                     <Div className='side-bar-title'>
                         <Button onClick={() => {setOpened(!isOpened)}}>x</Button>
-                        {isOpened && <h2  style={{textAlign:'right'}}id='playlist-bar-h2'>Song info</h2>}
+                        <h2  style={{textAlign:'right'}}id='playlist-bar-h2'>Song info</h2>
                     </Div>
-                    {isOpened && <>
                         <img src={src} alt='Image loading error'></img>
                         <h2>{title}</h2>
                         <p>{details}</p>
-                    </>}
-                </Div>
+                </Div>}
             </>
 
         );
